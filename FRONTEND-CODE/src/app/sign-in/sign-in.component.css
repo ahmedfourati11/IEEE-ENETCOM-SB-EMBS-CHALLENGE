@@ -1,0 +1,50 @@
+.body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/assets/images/azrgfhj@4x.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px; 
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1;
+    max-width: 400px; 
+    width: 200%; 
+    margin-top: 00px; 
+    margin-bottom: 70px;
+}
+
+.logo-container {
+    text-align: center;
+
+    margin-bottom: 5%; 
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.form-check-label {
+    margin-bottom: 0;
+}
+
+.form-container button[type="submit"].btn-primary {
+    background-color: #044cae;
+    border: none;
+}

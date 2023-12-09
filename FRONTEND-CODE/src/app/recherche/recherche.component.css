@@ -1,0 +1,156 @@
+.rechercher input[type="text"]{
+    width: 25%;
+      padding-left: 4%;
+      background-image: url('src/assets/images/rechercher.png');
+      background-size: 20px; 
+      background-position: 5px center; 
+      background-repeat: no-repeat; 
+      margin-left: 10%;
+     
+     
+  }
+  .bonde{
+    height: 50px;
+    background-color: #D9D9D9;
+    width: 100%;
+    text-align: right;
+    
+}
+.left{
+    margin-top: 20px;
+}
+.homme{
+height: 30px;
+width: 30px;
+margin-left: 1%;
+}
+.dr{
+    color: black;
+    margin-right: 70px;
+    
+}
+
+.div3{
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+}
+.user{
+    height: 40px;
+    width: 40px;
+    margin-left: 40px;
+}
+.p1{
+    margin-top: 10px;
+}
+.div4{ 
+    width: 50%;
+  
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end;
+    margin-right: 10%;
+    margin-top: 5%;
+    
+}
+.rechercher{
+   
+    margin-top: 3%;
+    width: 87%;
+
+}
+input[type="text"] {
+    width: 350px;
+}
+.Ajoutuser{
+    height: 40px;
+    width: 40px;  
+    margin-top: ;
+
+}
+.p2{
+    margin-top: 10px;
+   
+    width: 320px;
+   
+}
+
+.mod{
+    height: 20px;
+    width: 20px;
+    position: relative;
+
+}
+.mod1{
+    height: 15px;
+    width: 15px;
+
+}
+.action{
+  margin-left: 60%;
+    
+}
+
+.colorY{
+    background-color: #D3C803;
+}
+.colorG{
+    background-color: #57AB3F ;
+}
+.colorR{
+    background-color: #D33D3D;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background-container {
+    background-image: url('/assets/images/azrgfhj@4x.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px; 
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1;
+    max-width: 400px; 
+    width: 200%; 
+    margin-top: 00px; 
+    margin-bottom: 70px;
+}
+
+.logo-container {
+    text-align: center;
+
+    margin-bottom: 5%; 
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.form-check-label {
+    margin-bottom: 0;
+}
+
+.form-container button[type="submit"].btn-primary {
+    background-color: #044cae;
+    border: none;
+}

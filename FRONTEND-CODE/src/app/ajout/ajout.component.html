@@ -1,0 +1,90 @@
+<div class="body" >
+
+
+  <div class="bonde">
+
+    <div class="div4">
+      <a routerLink="/index"><img class="Ajoutuser" src="assets/images/retour copie.png" ></a>  
+      <p class="p2">Retour Au Liste Des Patients</p>
+   </div>
+
+    <div class="div11">
+      <img class="Ajoutuser" src="assets\images\2536@4x.png" > 
+    </div>
+  
+  </div>
+
+  
+  <div class="form-container">
+
+      <form>
+
+        <label for="Username" class="form-label color"><b> Ajouter Un Nouveau Patient ! </b></label> <br><br>
+
+
+          <div class="mb-3">
+              <input type="text" class="form-control" id="nom"  placeholder="Nom du patient" required> 
+          </div>
+
+          <div class="mb-3">
+              <input type="text" class="form-control" id="prenom" placeholder="Prénom du patient" required>
+          </div> 
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="genre" placeholder="Genre" required>
+          </div> 
+
+          <div class="mb-3">
+            <input type="datetime-local" class="form-control" id="date"  placeholder="Date de naissance" required>
+          </div>
+
+          <div class="mb-3">
+             <input type="number" class="form-control" id="numero" placeholder="Numéro de téléphone" required>
+        </div>
+
+        <div class="mb-3">
+          <input type="number" class="form-control" id="cin" placeholder="CIN" required>
+        </div>
+
+             <div class="mb-3">
+             <input type="text" class="form-control" id="email" placeholder="E-mail">
+             </div>
+
+             <div class="mb-3">
+              <input type="text" class="form-control" id="mdp" placeholder="Mot de passe">
+            </div>
+
+             <!-- <div class="mb-3">
+             <input type="text" class="form-control" id="frequence" placeholder="Fréquence cardiaque (%)" required>
+             </div>
+
+            <div class="mb-3">
+            <input type="text" class="form-control" id="oxy" placeholder="Oxygéne" required>
+            </div> -->
+            <!-- <hr> -->
+
+                                   <!-- checkboxs -->
+
+          <label for="Username" class="form-label"><b>Ajouter une maladie</b></label>
+
+           <div class="form-check">
+             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+             <label class="form-check-label" for="flexCheckDefault">
+             Hypertension Artérielle
+             </label>
+           </div>
+
+           <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+            Insuffisance cardiaque
+            </label>
+          </div> <hr>
+<br> 
+          <!-- <a routerLink="/index" > -->
+              <button type="submit" class="btn btn-primary botn" (click)="verifier($event)">Submit</button>
+          <!-- </a> -->
+          
+      </form>
+  </div>
+</div>

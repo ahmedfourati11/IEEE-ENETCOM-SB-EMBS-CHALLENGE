@@ -1,0 +1,98 @@
+
+<div class="bonde">
+  <img class="left" class="homme" src="assets/images/garcon.png"><b class="dr">DR.Kammoun</b>
+</div>
+
+
+<table>
+  <tr>
+<th class="form-group mx-sm-3 mb-2" class="rechercher">
+    <input type="text" [(ngModel)]="searchTerm" (input)="onSearch()" class="form-control" id="recherche" placeholder="Rechercher " >
+   
+  </th>
+  <th class="div4">
+
+    <a routerLink="/ajout"><img class="Ajoutuser" src="assets/images/ajouter-un-ami.png" ></a><br>
+   
+    <p class="p2">Ajouter un Patient</p>
+  
+  </th>
+<br>
+  </tr>
+  
+</table>
+ 
+<table class="table table-bordered">
+  <thead class="table-active">
+    <tr >
+      
+      <th scope="col">NOM ET PRENOM</th>
+      <th scope="col">DATE ET HEURE</th>
+      <th scope="col"> PRESSION ARTERIELLE</th>
+      <th scope="col">FREQUENCE CARDIAQUE</th>
+      <th scope="col">OXYGENE</th>
+      <th scope="col">ACTION</th>
+      <th scope="col">ETAT</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+   
+    <tr *ngFor="let user of filteredUsers">
+     
+      <td >{{ user.name }}</td>
+      <td >{{user.DH}}</td>
+      <td >{{user.PA}}</td>
+      <td >{{user.FC}}</td>
+      <td >{{user.Ox}}</td>
+      <td>
+<div class="action">
+
+    <a routerLink="/read"><img class="mod" src="assets/images/modifier.png" ></a>
+    <a (click)="effacerLigne(i)"><img class="mod" src="assets/images/effacer.png" ></a>
+
+</div>
+      </td>
+      <td class="colorR"></td>
+    </tr>
+    <tr *ngFor="let user of filteredUsers">
+     
+      <td >{{ user.name }}</td>
+      <td >{{user.DH}}</td>
+      <td >{{user.PA}}</td>
+      <td >{{user.FC}}</td>
+      <td >{{user.Ox}}</td>
+      <td>
+<div class="action">
+
+    <a routerLink="/read"><img class="mod" src="assets/images/modifier.png" ></a>
+    <a (click)="effacerLigne(i)"><img class="mod" src="assets/images/effacer.png" ></a>
+
+</div>
+      </td>
+      <td class="colorY"></td>
+    </tr>
+    <tr *ngFor="let user of filteredUsers">
+     
+      <td >{{ user.name }}</td>
+      <td >{{user.DH}}</td>
+      <td >{{user.PA}}</td>
+      <td >{{user.FC}}</td>
+      <td >{{user.Ox}}</td>
+      <td>
+<div class="action">
+
+    <a routerLink="/read"><img class="mod" src="assets/images/modifier.png" ></a>
+    <a (click)="effacerLigne(i)"><img class="mod" src="assets/images/effacer.png" ></a>
+
+</div>
+      </td>
+      <td class="colorG"></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<a routerLink="/xxx">xxxx</a>
+

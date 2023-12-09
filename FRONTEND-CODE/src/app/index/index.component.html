@@ -1,0 +1,73 @@
+<div class="bodyn">
+<div class="bonde">
+  <div class="div11">
+    <img class="Ajoutuser" src="assets\images\2536@4x.png" > 
+  </div>
+
+ <div class="div4">
+    <a routerLink="/ajout"><img class="Ajoutuser" src="assets/images/patient.png" ></a>  
+    <p class="p2">Ajouter un Patient</p>
+ </div>
+
+<!-- RECHERCHE -->
+<div class="divm">
+<div class="form-group mx-sm-3 mb-2" class="rechercher">
+  <input type="text" [(ngModel)]="searchTerm" (input)="onSearch()" class="form-control" id="recherche" placeholder="Rechercher " >
+</div>
+</div>
+
+<!-- FIN RECHERCHE -->
+
+<div class="div9">
+    <a routerLink="/analyse"><img class="Ajoutuser" src="assets/images/data-analytics.png" ></a>
+     
+    <p class="p2">Analyser les données</p>
+</div>
+<div class="div5">
+    <img class="left" class="homme" src="assets/images/garcon.png"><p class="dr" style="color: white;" >DR.{{authFullName}}</p>    
+</div>
+</div>
+
+
+<br>
+<table class="tablee" >
+  <thead class="table-active tab" >
+    <tr  >
+      
+      <th class="th" scope="col" style="color: #2E006C;">Nom Et Prénom</th>
+      <th class="th" scope="col" style="color: #2E006C;">Date De Mesure</th>
+      <th class="th" scope="col" style="color: #2E006C;">Genre</th>
+      <th class="th" scope="col"style=" color: #2E006C;">Age</th>
+      <th class="th" scope="col" style="color: #2E006C;">Fréquence Cardiaque (Bpm/Min)</th>
+      <th class="th" scope="col" style="color: #2E006C;">Oxygéne (%)</th>
+      <!-- <th class="th" scope="col" style="color: #2E006C;">OXYGENE</th> -->
+      <th class="th" scope="col" style="color: #2E006C;">Etat</th>
+      <th class="th" scope="col" style="color: #2E006C;">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+   
+    <tr *ngFor="let user of history" class="tab">
+     
+      <td ><b style="color: #000000;">{{user.name}}</b></td>
+      <td ><b style="color: #000000;">{{user.date}}</b></td>
+       <td ><b>{{user.patient.gender}}</b></td>
+      <td ><b style="color: #000000;">{{user.patient.age}}</b></td>
+      <td ><b style="color: #000000;">{{user.cardiacFrequency}}</b></td>
+      <td ><b style="color: #000000;">{{user.oxygenSaturation}}</b></td>
+ 
+      <td class="{{user.state}}"></td>
+
+    <td>
+     <div class="action">
+       <a (click)="onNavigateToUserInfo(user.patient.id)"><img class="mod" src="assets/images/modifier.png"></a>
+       <a (click)="effacerLigne(user.id)"><img class="mod" src="assets/images/effacer.png" ></a>
+     </div>
+    </td>
+    </tr>  
+  </tbody>
+</table>
+</div>
+
+

@@ -1,0 +1,134 @@
+<div class="body">
+ 
+
+  <div class="bonde">
+  
+      <div class="div4">
+        <a routerLink="/index"><img class="Ajoutuser" src="assets/images/retour copie.png" ></a>  
+        <p class="p2">Retour Au Liste Des Patients</p>
+      </div>
+  
+      <div class="div9">
+        <p class="p2"> <b>Analyse détaillée du patient</b></p>
+      </div>
+ 
+      <div class="div11">
+        <img class="Ajoutuser" src="assets\images\2536@4x.png" > 
+      </div>
+
+  </div>
+
+
+<table class="table">
+ <tr>
+
+  <th class="form" >
+    <form>
+      <label for="Username" class="form-label color form"><b>Information Sur Le Patient</b></label> <br>
+        <div class="mb-3">
+            <input type="text"  [value]="profile.firstName"  class="form-control" id="nom"  placeholder="Nom du patient" required> 
+        </div>
+
+        <div class="mb-3">
+            <input type="text" class="form-control" id="prenom" placeholder="Prénom du patient" [value]="profile.lastName" required>
+        </div> 
+
+        <div class="mb-3">
+          <input type="text" class="form-control" id="genre" placeholder="Genre" [value]="profile.gender" required>
+        </div> 
+
+        <div class="mb-3">
+          <input type="datetime-local" class="form-control" id="date"  placeholder="Date de naissance" [value]="profile.date" required>
+        </div>
+
+        <div class="mb-3">
+           <input type="number" class="form-control" id="numero" placeholder="Numéro de téléphone" [value]="profile.phoneNumber" required>
+      </div>
+
+      <div class="mb-3">
+        <input type="number" class="form-control" id="cin" placeholder="CIN" [value]="profile.cin" required>
+      </div>
+
+           <div class="mb-3">
+           <input type="text" class="form-control" id="email" placeholder="E-mail" [value]="profile.email">
+           </div>
+
+           <div class="mb-3">
+            <input type="text" class="form-control" id="mdp" placeholder="Mot de passe" [value]="profile.password">
+          </div>
+
+                                 <!-- checkboxs -->
+        <!-- <div class="contenucheck">    
+        <label for="Username" class="form-label"><b>Ajouter une maladie</b></label>
+
+         <div class="form-check">
+           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+           <label class="form-check-label" for="flexCheckDefault">
+           Hypertension Artérielle
+           </label>
+         </div>
+
+          <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked">
+          Insuffisance cardiaque
+          </label>
+          </div>  
+        </div>  -->
+
+    </form>
+
+       <!-- <div class="form-group">
+       <p class="font-weight-bold" class="font-italic">Ajouter une maladie</p>
+       <input type="text" class="ajout" [style.width.px]="350" class="nom" class="form-control" id="nom" placeholder="Ajouter une maladie" [(ngModel)]="utilisateur.nom" NgModel required minlength="5"><br>
+       <div class="n1">
+       <button  type="button" class="btn btn-outline-info" (click)="displayMessage()">ENVOYER</button>
+       <p class="n2" class="card-subtitle mb-2 text-muted">{{ message }}</p>
+       </div>
+       </div> -->
+
+  </th>
+
+  <th>
+    <table  class="table table2">
+
+      <thead>
+
+        <tr>
+          <th scope="col" style="color: #044cae;">Date de mesure</th>
+          <th scope="col" style="color: #044cae;">Fréquence Cardiaque (Bpm/Min)</th>
+          <th scope="col" style="color: #044cae;">Oxygéne (%)</th>
+          <th scope="col" style="color: #044cae;">Etat</th>
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr *ngFor="let user of histories" class="tab">
+     
+          <td ><b style="color: #000000;">{{user.date}}</b></td>
+          <td ><b style="color: #000000;">{{user.cardiacFrequency}}</b></td>
+          <td ><b style="color: #000000;">{{user.oxygenSaturation}}</b></td>
+          <td class="{{user.state}}"></td>
+        </tr>
+
+      </tbody>
+
+    </table>
+  </th>
+
+ </tr>
+</table> <br>
+<p><b style="color: #044cae;">Analyse détaillée des maladies Cardiovasculaires du patient</b></p>
+
+<br>
+  <!-- power BI -->
+<div *ngIf="userId == '4'"> <iframe title="Report Section" width="1140" height="541.25" src="https://app.powerbi.com/view?r=eyJrIjoiMTM3NTU5YjYtOGM5My00OTNhLTkyOGMtMjc2NTQ1MzFkMDAyIiwidCI6ImRiZDY2NjRkLTRlYjktNDZlYi05OWQ4LTVjNDNiYTE1M2M2MSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe></div>
+
+<div *ngIf="userId == '1'">  <iframe title="BOUAZ" width="1140" height="541.25" src="https://app.powerbi.com/view?r=eyJrIjoiYjc1M2VjMGUtNGNhZC00Y2RjLWFmNDctMjUxNWFiMmU1MDRlIiwidCI6ImRiZDY2NjRkLTRlYjktNDZlYi05OWQ4LTVjNDNiYTE1M2M2MSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe></div>
+
+<div *ngIf="userId == '13'"><iframe title="Report Section" width="1140" height="541.25"  src="https://app.powerbi.com/view?r=eyJrIjoiYjgzYTIwMjktZGFiYS00NmRhLWI0MzctNWNlNTUxM2RkYjYyIiwidCI6ImRiZDY2NjRkLTRlYjktNDZlYi05OWQ4LTVjNDNiYTE1M2M2MSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe></div>
+
+<br>
+</div>
